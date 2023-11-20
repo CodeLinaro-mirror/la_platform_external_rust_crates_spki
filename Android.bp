@@ -68,6 +68,7 @@ rust_library_rlib {
         "//external/rust/crates/pkcs1:__subpackages__",
         "//external/rust/crates/pkcs8:__subpackages__",
         "//external/rust/crates/x509-cert:__subpackages__",
+        "//packages/modules/Virtualization:__subpackages__",
         "//system/keymint:__subpackages__",
     ],
 
