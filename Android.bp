@@ -31,8 +31,9 @@ license {
     ],
 }
 
-rust_library_host {
+rust_library {
     name: "libspki",
+    host_supported: true,
     crate_name: "spki",
     cargo_env_compat: true,
     cargo_pkg_version: "0.6.0",
@@ -40,6 +41,20 @@ rust_library_host {
     edition: "2021",
     features: ["alloc"],
     rustlibs: ["libder"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.virt",
+    ],
+    product_available: true,
+    vendor_available: true,
+    visibility: [
+        "//external/rust/crates/pkcs1:__subpackages__",
+        "//external/rust/crates/pkcs8:__subpackages__",
+        "//external/rust/crates/x509-cert:__subpackages__",
+        "//packages/modules/Virtualization:__subpackages__",
+        "//system/keymint:__subpackages__",
+    ],
+
 }
 
 rust_library_rlib {
