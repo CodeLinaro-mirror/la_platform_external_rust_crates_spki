@@ -1,3 +1,4 @@
 {
-  "features": "alloc"
+  "features": "alloc",
+  "patch": "patches/rules.mk.diff"
 }
